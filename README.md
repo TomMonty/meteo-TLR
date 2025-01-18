@@ -98,7 +98,7 @@ Une fois ajouté, le plugin affichera automatiquement la carte et les données m
 ## 🧑‍💻 Contributeurs
 
 - **Tom Monty** : Développeur principal, intégration API et géolocalisation.
-- **Loann Duvl** : Design, animations et intégration Leaflet.js.
+- **Loann Duval** : Design, animations et intégration Leaflet.js.
 - **Ryan Sellier** : Optimisation des performances et structure dynamique.
 
 ---
