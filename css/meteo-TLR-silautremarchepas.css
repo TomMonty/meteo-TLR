@@ -1,0 +1,171 @@
+/* Conteneur principal avec un dégradé */
+#meteo-tlr {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 20px auto; /* Centré avec des marges adaptées */
+    max-width: 95%; /* Largeur maximale pour éviter les débordements */
+    border-radius: 20px; /* Coins arrondis pour un design moderne */
+    overflow: hidden; /* Empêche les débordements visuels */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Ombre portée */
+    position: relative; /* Nécessaire pour positionner les éléments internes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide au survol */
+    background: linear-gradient(90deg, rgb(255, 144, 144), rgb(108, 189, 255)); /* Dégradé chaud/froid */
+    padding: 4px; /* Espacement pour afficher le dégradé */
+}
+
+/* Conteneur interne */
+#meteo-tlr-inner {
+    background: #fff; /* Fond blanc pour contraster avec le dégradé */
+    border-radius: 15px; /* Arrondi interne */
+    overflow: hidden; /* Empêche le contenu de déborder */
+}
+
+/* Effet au survol du conteneur principal */
+#meteo-tlr:hover {
+    transform: translateY(-5px); /* Léger déplacement vers le haut */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Ombre renforcée */
+}
+
+/* Conteneur de la carte Leaflet */
+#meteo-tlr-map {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    height: 60vh; /* Hauteur dynamique en fonction de la taille de l'écran */
+    min-height: 300px; /* Hauteur minimale pour les petits écrans */
+    max-height: 700px; /* Limite la hauteur maximale */
+    position: relative;
+    overflow: hidden; /* Empêche les débordements */
+    z-index: 1; /* Place la carte derrière les informations si elles se chevauchent */
+}
+
+/* Conteneur des informations météo */
+#meteo-tlr-info {
+    position: relative; /* Pas absolu pour plus de flexibilité */
+    background: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+    color: #333; /* Texte sombre pour un bon contraste */
+    padding: 20px; /* Espacement interne généreux */
+    border-radius: 15px; /* Coins arrondis pour le design */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    display: flex; /* Organisation en flexbox */
+    flex-direction: column; /* Disposition verticale */
+    gap: 20px; /* Espacement entre les éléments internes */
+    transition: height 0.3s ease, padding 0.3s ease; /* Transition fluide pour les ajustements */
+}
+
+/* Informations météo sans bouton visible */
+#meteo-tlr-info:not(.button-visible) {
+    padding-bottom: 0; /* Réduction de l'espace inutile */
+}
+
+/* Contenu des informations météo */
+.meteo-content {
+    display: flex;
+    align-items: center; /* Alignement vertical centré */
+    gap: 20px; /* Espacement entre l'icône et les détails */
+}
+
+/* Icône météo */
+.meteo-icon img {
+    width: 150px; /* Taille ajustée pour un design équilibré */
+    height: 150px;
+    display: block;
+    border-radius: 10px; /* Coins légèrement arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    background: linear-gradient(90deg, rgb(255, 144, 144), rgb(108, 189, 255)); /* Gradient intégré */
+}
+
+/* Détails météo */
+.meteo-details {
+    flex: 1; /* Prend tout l'espace restant */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+.meteo-details h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.meteo-details .description {
+    font-style: italic; /* Style différencié */
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666; /* Couleur discrète */
+}
+
+.meteo-details .temp-current {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Texte en gras */
+}
+
+.meteo-details .temp-range {
+    font-size: 14px;
+    color: #666; /* Couleur neutre */
+}
+
+/* Bouton de localisation */
+#locate-button {
+    background-color: #005bb5; /* Couleur bleue distinctive */
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px; /* Coins arrondis */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%; /* Largeur complète */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease; /* Transitions fluides */
+    opacity: 0; /* Masqué par défaut */
+    pointer-events: none; /* Désactivé par défaut */
+}
+
+/* Bouton visible */
+#locate-button.button-visible {
+    opacity: 1; /* Rendu visible */
+    pointer-events: auto; /* Autorisé au clic */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #meteo-tlr {
+        margin: 10px; /* Réduction des marges */
+    }
+
+    #meteo-tlr-map {
+        height: 50vh; /* Hauteur ajustée pour petits écrans */
+    }
+
+    #meteo-tlr-info {
+        padding: 15px; /* Réduction des espacements */
+        border-radius: 10px; /* Coins moins arrondis */
+    }
+
+    .meteo-content {
+        flex-direction: column; /* Réorganisation en colonne */
+        align-items: center;
+    }
+
+    .meteo-icon img {
+        width: 80px; /* Taille réduite */
+        height: 80px;
+    }
+
+    .meteo-details h2 {
+        font-size: 18px; /* Taille du titre réduite */
+    }
+
+    .meteo-details .temp-current {
+        font-size: 20px; /* Texte réduit */
+    }
+
+    .meteo-details .temp-range {
+        font-size: 12px;
+    }
+
+    #locate-button {
+        padding: 10px; /* Taille réduite pour le bouton */
+        font-size: 12px;
+    }
+}
