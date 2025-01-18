@@ -51,7 +51,7 @@ Ce plugin a été développé par **Tom Monty**, **Loann Duval** et **Ryan Selli
 
 1. **Cloner le dépôt :**
    ```bash
-   git clone https://github.com/<votre-utilisateur>/meteo-TLR.git
+   git clone https://github.com/TomMonty/meteo-TLR.git
    ```
 
 2. **Coller le token de votre clé API OpenWeather dans les deux endroits situé dans meteo-TLR :**
@@ -117,3 +117,10 @@ Pour toute question ou suggestion, vous pouvez nous contacter via GitHub :
 - **Ryan Sellier**
 
 Lien du dépôt GitHub : [meteo-TLR](https://github.com/<votre-utilisateur>/meteo-TLR)
+
+
+
+##Projet CMS HETIC H2 :
+```
+[HETIC ( Hautes Études des Technologies de l'Information et de la Communication )](https://www.hetic.net/)
+```
