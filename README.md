@@ -118,14 +118,3 @@ Pour toute question ou suggestion, vous pouvez nous contacter via GitHub :
 
 Lien du dépôt GitHub : [meteo-TLR](https://github.com/<votre-utilisateur>/meteo-TLR)
 ```
-
----
-
-### Comment utiliser ce fichier :
-
-1. **Copier** le contenu.
-2. **Coller** directement dans un fichier `README.md` sur votre dépôt GitHub.
-3. Remplacer `<votre-utilisateur>` par votre nom d'utilisateur GitHub.
-4. Vérifier l'affichage final sur GitHub pour vous assurer que tout est correct.
-
-Ce fichier est prêt pour une présentation propre et professionnelle sur votre dépôt GitHub ! 🚀
