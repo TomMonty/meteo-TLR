@@ -20,7 +20,7 @@
 
 ## 🌟 À propos
 
-Ce plugin a été développé par **Tom Monty**, **Loann Duval** et **Ryan Sellier**. Le nom "**meteo-TLR**" provient des initiales des trois développeurs.
+Ce plugin a été développé par **Tom Monty**, **Loann Duval** et **Ryan Sellier**.
 
 **meteo-TLR** offre une interface intuitive et moderne permettant d'afficher :
 - Une carte interactive montrant la position actuelle de l'utilisateur.
