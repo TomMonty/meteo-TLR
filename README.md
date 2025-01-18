@@ -54,14 +54,18 @@ Ce plugin a été développé par **Tom Monty**, **Loann Duvl** et **Ryan Sellie
    git clone https://github.com/<votre-utilisateur>/meteo-TLR.git
    ```
 
-2. **Placer le plugin dans le dossier WordPress :**
+2. **Coller le token de votre clé API OpenWeather dans les deux endroits situé dans meteo-TLR :**
+
+   Les emplacements sont indiqués par un ligne : ----------------------------------------------------------------
+
+3. **Placer le plugin dans le dossier WordPress :**
 
    Copiez le dossier **meteo-TLR** dans le répertoire suivant :
    ```
    /wp-content/plugins/
    ```
 
-3. **Activer le plugin :**
+4. **Activer le plugin :**
 
    - Connectez-vous à votre tableau de bord WordPress.
    - Allez dans l'onglet **Extensions** et activez **meteo-TLR**.
