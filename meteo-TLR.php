@@ -1,27 +1,25 @@
 <?php
 /*
 Plugin Name: meteo-TLR
-Description: A plugin that displays the user's current location and weather information using the OpenWeather API and Leaflet.js.
+Description: Un plugin qui affiche la position actuelle de l'utilisateur et les informations météorologiques à l'aide de l'API OpenWeather et de Leaflet.js.
 Version: 3.2
 Author: Tom Monty, Loann Duval et Ryan Sellier
 */
 
-// Ajout des styles et scripts nécessaires
 add_action('wp_enqueue_scripts', 'meteo_tlr_enqueue_assets');
 
 function meteo_tlr_enqueue_assets()
 {
-    // Chargement des fichiers CSS et JS de Leaflet.js (bibliothèque pour les cartes interactives)
+    // Chargement des fichiers pour Leaflet ( la carte )
     wp_enqueue_style('leaflet', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css');
     wp_enqueue_script('leaflet', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js', array(), null, true);
 
-    // Chargement des fichiers CSS et JS personnalisés pour le plugin
+    // Chargement des fichiers CSS et JS
     wp_enqueue_style('meteo-tlr-style', plugin_dir_url(__FILE__) . 'css/meteo-TLR.css');
     wp_enqueue_script('meteo-tlr-script', plugin_dir_url(__FILE__) . 'js/meteo-TLR.js', array('leaflet'), '1.0', true);
 
-    // Envoi des données dynamiques au script JS via la fonction wp_localize_script
     wp_localize_script('meteo-tlr-script', 'meteoTLRData', array(
-        'apiKey' => 'bc60193a0ca43b08b77bcfc9d7d01e71', // Clé API OpenWeather (remplacez par votre propre clé)
+        'apiKey' => '', // Clé API OpenWeather (remplacez par votre propre clé) ------------------------------------------------------------------------------------------------------------------------------
         'ajaxUrl' => admin_url('admin-ajax.php'), // URL pour gérer les requêtes AJAX
     ));
 }
@@ -54,13 +52,12 @@ function meteo_tlr_shortcode()
         </div>';
 }
 
-// Ajout des hooks AJAX pour les utilisateurs connectés et non connectés
-add_action('wp_ajax_nopriv_get_meteo_tlr', 'get_meteo_tlr'); // Pour les utilisateurs non connectés
-add_action('wp_ajax_get_meteo_tlr', 'get_meteo_tlr'); // Pour les utilisateurs connectés
+add_action('wp_ajax_nopriv_get_meteo_tlr', 'get_meteo_tlr');
+add_action('wp_ajax_get_meteo_tlr', 'get_meteo_tlr');
 
 function get_meteo_tlr()
 {
-    // Récupération de la latitude et de la longitude depuis les données POST
+    // Récupération de la latitude et de la longitud
     $lat = isset($_POST['lat']) ? sanitize_text_field($_POST['lat']) : null;
     $lon = isset($_POST['lon']) ? sanitize_text_field($_POST['lon']) : null;
 
@@ -70,7 +67,7 @@ function get_meteo_tlr()
     }
 
     // Construction de l'URL pour l'API OpenWeather avec les coordonnées et l'unité en Celsius
-    $apiKey = ''; //Mettre votre clé API ici
+    $apiKey = ''; // Clé API OpenWeather (remplacez par votre propre clé) ------------------------------------------------------------------------------------------------------------------------------
     $url = "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&units=metric&appid=$apiKey";
 
     // Requête pour récupérer les données météo depuis OpenWeather
