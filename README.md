@@ -113,7 +113,7 @@ Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plu
 
 Pour toute question ou suggestion, vous pouvez nous contacter via GitHub :
 - **Tom Monty**
-- **Loann Duvl**
+- **Loann Duval**
 - **Ryan Sellier**
 
 Lien du dépôt GitHub : [meteo-TLR](https://github.com/<votre-utilisateur>/meteo-TLR)
