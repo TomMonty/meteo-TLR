@@ -1,3 +1,16 @@
+---
+
+###Attention
+
+##Si le CSS ne marche pas rempalcer tout le css de meteo-TLR.css par celui de meteo-TLR-silautremarchepas.css
+##Si le token de l'API ne marche pas utiliser :
+```
+bc60193a0ca43b08b77bcfc9d7d01e71
+```
+
+
+---
+
 ###markdown
 # meteo-TLR 🌦️
 

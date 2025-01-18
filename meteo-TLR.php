@@ -19,7 +19,7 @@ function meteo_tlr_enqueue_assets()
     wp_enqueue_script('meteo-tlr-script', plugin_dir_url(__FILE__) . 'js/meteo-TLR.js', array('leaflet'), '1.0', true);
 
     wp_localize_script('meteo-tlr-script', 'meteoTLRData', array(
-        'apiKey' => '', // Clé API OpenWeather (remplacez par votre propre clé) ------------------------------------------------------------------------------------------------------------------------------
+        'apiKey' => 'bc60193a0ca43b08b77bcfc9d7d01e71', // Clé API OpenWeather (remplacez par votre propre clé) ------------------------------------------------------------------------------------------------------------------------------
         'ajaxUrl' => admin_url('admin-ajax.php'), // URL pour gérer les requêtes AJAX
     ));
 }
@@ -36,8 +36,8 @@ function meteo_tlr_shortcode()
                 <div id="meteo-tlr-map"></div> <!-- Conteneur pour la carte interactive -->
                 <div id="meteo-tlr-info"> <!-- Section d\'informations météo -->
                     <button id="locate-button" class="hidden">📍 Revenir à ma position</button>
-                    <div class="meteo-content">
-                        <div class="meteo-icon">
+                        <div class="meteo-content">
+                            <div class="meteo-icon">
                             <img src="https://via.placeholder.com/100" alt="Weather Icon"> <!-- Icône météo -->
                         </div>
                         <div class="meteo-details">
@@ -67,7 +67,7 @@ function get_meteo_tlr()
     }
 
     // Construction de l'URL pour l'API OpenWeather avec les coordonnées et l'unité en Celsius
-    $apiKey = ''; // Clé API OpenWeather (remplacez par votre propre clé) ------------------------------------------------------------------------------------------------------------------------------
+    $apiKey = 'bc60193a0ca43b08b77bcfc9d7d01e71'; // Clé API OpenWeather (remplacez par votre propre clé) ------------------------------------------------------------------------------------------------------------------------------
     $url = "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&units=metric&appid=$apiKey";
 
     // Requête pour récupérer les données météo depuis OpenWeather
