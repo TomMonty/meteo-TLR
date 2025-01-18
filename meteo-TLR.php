@@ -3,7 +3,7 @@
 Plugin Name: meteo-TLR
 Description: A plugin that displays the user's current location and weather information using the OpenWeather API and Leaflet.js.
 Version: 3.2
-Author: Tom Monty
+Author: Tom Monty, Loann Duval et Ryan Sellier
 */
 
 // Ajout des styles et scripts nécessaires
