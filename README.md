@@ -123,3 +123,11 @@ Lien du dépôt GitHub : [meteo-TLR](https://github.com/<votre-utilisateur>/mete
 ##Projet CMS HETIC H2 :
 
 [HETIC ( Hautes Études des Technologies de l'Information et de la Communication )](https://www.hetic.net/)
+
+
+##Screenshot ( Exemple de fonctionnement ) :
+
+![Image sans interactions](https://github.com/user-attachments/assets/16ba09e7-ae45-41e4-a810-750ff4c55dfa)
+
+![Image avec interactions](https://github.com/user-attachments/assets/19f418e5-41de-4b58-b67a-15cca02d982e)
+
