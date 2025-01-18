@@ -1,6 +1,4 @@
-Voici une version complète et formatée avec les bons niveaux de titres Markdown (`#`, `##`, `###`), prête à être copiée et collée sur GitHub :
-
-```markdown
+###markdown
 # meteo-TLR 🌦️
 
 **meteo-TLR** est un plugin WordPress qui affiche des informations météorologiques en fonction de la localisation de l'utilisateur. Il utilise l'API OpenWeather pour les données météorologiques et Leaflet.js pour afficher une carte interactive.
