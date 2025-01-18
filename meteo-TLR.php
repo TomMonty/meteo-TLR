@@ -70,7 +70,7 @@ function get_meteo_tlr()
     }
 
     // Construction de l'URL pour l'API OpenWeather avec les coordonnées et l'unité en Celsius
-    $apiKey = 'bc60193a0ca43b08b77bcfc9d7d01e71';
+    $apiKey = ''; //Mettre votre clé API ici
     $url = "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&units=metric&appid=$apiKey";
 
     // Requête pour récupérer les données météo depuis OpenWeather
