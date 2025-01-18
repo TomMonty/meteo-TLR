@@ -121,6 +121,5 @@ Lien du dépôt GitHub : [meteo-TLR](https://github.com/<votre-utilisateur>/mete
 
 
 ##Projet CMS HETIC H2 :
-```
+
 [HETIC ( Hautes Études des Technologies de l'Information et de la Communication )](https://www.hetic.net/)
-```
